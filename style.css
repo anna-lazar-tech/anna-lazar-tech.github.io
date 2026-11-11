@@ -277,3 +277,20 @@ footer {
 .hero-copy {
   padding-bottom: 45px;
 }
+
+/* Показываем обложку Hajime Dojo целиком */
+.project-card[data-id="dojo"] .cover {
+  background: #0b0b0b;
+}
+
+.project-card[data-id="dojo"] .cover img {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+/* Крупный план интерфейса на обложке Karate Trainer */
+.project-card[data-id="karate-trainer"] .cover img {
+  object-fit: cover !important;
+  object-position: center 35% !important;
+}
