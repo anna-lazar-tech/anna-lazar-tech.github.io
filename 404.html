@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>404 — Анна Лазарь</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;min-height:100svh;display:grid;grid-template-rows:auto 1fr auto;background:#17140f;color:#f5f1e8;font:16px/1.6 Manrope,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid #d8a365;outline-offset:4px}
+header,footer{padding:20px 6%;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;border-color:#f5f1e829;border-style:solid;border-width:0 0 1px}
+.brand{letter-spacing:.22em;font:22px Georgia,serif;letter-spacing:.22em}
+nav,.actions{display:flex;flex-wrap:wrap;gap:12px}
+nav a,.actions a{border:1px solid #d8a36580;padding:8px 14px}
+nav [aria-current],.actions a:first-child{background:#d8a365;color:#17140f}
+a:hover{box-shadow:0 0 0 1px #d8a365}
+main{position:relative;isolation:isolate;overflow:hidden;display:grid;align-items:center;padding:clamp(44px,9vw,120px) 6%}
+.art{position:absolute;z-index:-1;right:-4%;top:50%;transform:translateY(-50%);width:min(65vw,830px);opacity:.42}
+.copy{max-width:720px}
+.code{margin:0;color:#d8a365;font:clamp(82px,14vw,190px)/.85 Georgia,serif;letter-spacing:-.055em}
+h1{font:clamp(34px,6vw,74px)/1.04 Georgia,serif;margin:28px 0 16px}
+em{color:#d8a365;font-weight:normal}
+p{max-width:49ch;color:#c6b79f}
+.actions{margin-top:26px}
+.actions a{padding:12px 18px}
+footer{border-width:1px 0 0;color:#c6b79f;font-size:14px}
+@media(max-width:600px){.art{width:100%;right:-33%;opacity:.24}.brand{font-size:17px}}
+</style>
+</head>
+<body>
+<header><a class="brand" href="/" id="brand">ANNA LAZAR</a><nav id="language" aria-label="Язык сайта"><a href="?lang=ru" lang="ru" id="ru" aria-current="page">RU</a><a href="?lang=en" lang="en" id="en">EN</a></nav></header>
+<main>
+<svg class="art" viewBox="0 0 650 580" fill="none" aria-hidden="true">
+<g stroke="#d8a365"><ellipse cx="330" cy="285" rx="280" ry="150" transform="rotate(-28 330 285)"/><ellipse cx="330" cy="285" rx="278" ry="149" transform="rotate(35 330 285)"/><circle cx="330" cy="285" r="218" stroke-dasharray="2 9"/><path d="M330 42v486M73 285h514" opacity=".4"/></g><g fill="#d8a365"><circle cx="330" cy="285" r="6"/><circle cx="568" cy="150" r="4"/><circle cx="136" cy="407" r="4"/></g>
+</svg>
+<div class="copy"><p class="code">404</p><h1><span id="heading">Эта страница</span><br><em id="accent">потерялась в хаосе.</em></h1>
+<p id="description">Возможно, ссылка устарела. Вернись на главную или загляни в мои проекты.</p>
+<div class="actions"><a href="/" id="home">На главную</a><a href="/#projects" id="projects">Смотреть проекты ↗</a></div></div>
+</main>
+<footer><span id="slogan">Создаю структуру из хаоса.</span><span id="signature">Анна Лазарь</span></footer>
+<script>
+const params = new URLSearchParams(location.search);
+const english = params.get('lang') === 'en' || (!params.has('lang') && document.referrer.startsWith(location.origin + '/en.html'));
+if (english) {
+  document.documentElement.lang = 'en';
+  document.title = '404 — Anna Lazar';
+  const copy = {heading:'This page got', accent:'lost in the chaos.', description:'The link may be outdated. Head back to the homepage or explore my projects.', home:'Back to home', projects:'View projects ↗', signature:'Anna Lazar', slogan:'Building structure from chaos.'};
+  for (const [id, value] of Object.entries(copy)) document.getElementById(id).textContent = value;
+  for (const id of ['brand', 'home']) document.getElementById(id).href = '/en.html';
+  document.getElementById('projects').href = '/en.html#projects';
+  document.getElementById('language').setAttribute('aria-label', 'Site language');
+  document.getElementById('ru').removeAttribute('aria-current');
+  document.getElementById('en').setAttribute('aria-current', 'page');
+}
+</script>
+</body>
+</html>

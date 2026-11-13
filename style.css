@@ -294,3 +294,46 @@ footer {
   object-fit: cover !important;
   object-position: center 35% !important;
 }
+
+/* Portfolio language navigation */
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.language-switch a {
+  padding: 5px 6px;
+  border: 1px solid transparent;
+}
+
+.language-switch a[aria-current="page"] {
+  color: var(--gold);
+  border-color: currentColor;
+}
+
+@media (max-width: 600px) {
+  header nav {
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+}
+
+.pricing { margin-top: clamp(48px, 7vw, 100px); scroll-margin-top: 24px; }
+.pricing > h3 { font-size: clamp(28px, 4vw, 48px); margin: 0 0 24px; }
+.pricing-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.pricing-grid article { border: 1px solid #a1754c55; padding: clamp(16px, 2vw, 28px); }
+.pricing-grid h4 { margin: 0; font-size: 1.1rem; }
+.pricing-grid p { margin: 12px 0 0; line-height: 1.5; }
+.pricing-grid .price-amount { font-size: clamp(20px, 2vw, 28px); color: #774522; font-weight: 600; }
+.pricing-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 24px; }
+.pricing-footer p { margin: 0; }
+@media (max-width: 1000px) { .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 540px) { .pricing-grid { grid-template-columns: 1fr; } }
+
+/* Fill the psychologist project cover without affecting the gallery. */
+.project-card[data-id="psychologist"] .cover img {
+  object-fit: cover !important;
+  object-position: center !important;
+}

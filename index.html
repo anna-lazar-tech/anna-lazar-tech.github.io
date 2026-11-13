@@ -8,12 +8,14 @@
         content="Анна Лазарь — разработка сайтов, приложений и Telegram-ботов. Проекты на Java, Python и JavaScript.">
     <title>Анна Лазарь — сайты и приложения</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="alternate" hreflang="ru" href="https://www.annalazar.tech/">
+    <link rel="alternate" hreflang="en" href="https://www.annalazar.tech/en.html">
 </head>
 
 <body>
     <header><a class="brand" href="#home">ANNA LAZAR<span>DEVELOPER / PORTFOLIO</span></a>
         <nav aria-label="Основная навигация"><a href="#projects">Проекты</a><a href="#about">Обо мне</a><a
-                href="#contact">Контакты <span>↗</span></a></nav>
+                href="#contact">Контакты <span>↗</span></a><a href="#pricing">Стоимость</a><span class="language-switch" role="group" aria-label="Язык сайта"><a href="index.html" lang="ru" hreflang="ru" aria-current="page">RU</a> <a href="en.html" lang="en" hreflang="en">EN</a></span></nav>
     </header>
     <main>
         <section class="hero" id="home"><img class="portrait" src="assets/anna.webp"
@@ -22,7 +24,7 @@
             <div class="threads" aria-hidden="true"><i></i><i></i><i></i></div>
             <div class="hero-copy">
                 <p class="eyebrow">САЙТЫ · ПРИЛОЖЕНИЯ · АВТОМАТИЗАЦИЯ</p>
-                <h1>Building<br>structure<br>from <em>chaos.</em></h1>
+                <h1>Создаю<br>структуру<br>из <em>хаоса.</em></h1>
                 <p class="name">Анна Лазарь</p>
                 <p class="intro">Превращаю идеи в понятные цифровые решения.<br>От первого экрана до логики приложения.
                 </p>
@@ -55,6 +57,16 @@
                     <small>Python · aiogram · API · SQL</small>
                 </article>
             </div>
+            <div class="pricing" id="pricing" aria-labelledby="pricing-title">
+                <h3 id="pricing-title">Стоимость</h3>
+                <div class="pricing-grid">
+                <article><h4>Сайты</h4><p class="price-amount">от 7&nbsp;000&nbsp;₽</p><p>Сайт-визитка: услуги, преимущества, контакты и мобильная версия.</p></article>
+                <article><h4>Telegram-боты</h4><p class="price-amount">от 4&nbsp;000&nbsp;₽</p><p>Базовый бот с командами, кнопками и ответами.</p></article>
+                <article><h4>Скрипты и автоматизация</h4><p class="price-amount">от 2&nbsp;000&nbsp;₽</p><p>Python-скрипт для работы с файлами, таблицами или данными.</p></article>
+                <article><h4>Небольшие приложения</h4><p class="price-amount">от 7&nbsp;000&nbsp;₽</p><p>Небольшая программа для Windows. Веб- и Android-приложения оцениваю отдельно.</p></article>
+                </div>
+                <div class="pricing-footer"><p>Точную стоимость назову после обсуждения задачи.</p><a class="button gold" href="#contact">Обсудить проект <span aria-hidden="true">↗</span></a></div>
+            </div>
         </section>
         <section class="projects section" id="projects">
             <div class="projects-heading">
@@ -65,7 +77,7 @@
                 <p>Сайты, приложения и эксперименты.<br>Откройте проект, чтобы узнать детали.</p>
             </div>
             <div class="filters" role="group" aria-label="Фильтр проектов"><button class="active" data-filter="all"
-                    aria-pressed="true">Все проекты <sup>06</sup></button><button data-filter="site"
+                    aria-pressed="true">Все проекты <sup>07</sup></button><button data-filter="site"
                     aria-pressed="false">Сайты</button><button data-filter="app"
                     aria-pressed="false">Приложения</button><button data-filter="bot" aria-pressed="false">Боты</button>
             </div>
@@ -143,7 +155,7 @@
 </div>
         </section>
     </main>
-    <footer><span>© <span id="year"></span> Анна Лазарь</span><span>Building structure from chaos.</span><a
+    <footer><span>© <span id="year"></span> Анна Лазарь</span><span>Создаю структуру из хаоса.</span><a
             href="#home">Наверх ↑</a></footer>
     <dialog id="project-dialog" aria-labelledby="project-title"><button class="close"
             aria-label="Закрыть проект">×</button>
